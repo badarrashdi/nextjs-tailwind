@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/api/(.*)",
+      "source": "/~partytown/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "*" },
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "source": "/:path*",
+      "source": "/~partytown/:path*",
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "*" },
@@ -46,7 +46,7 @@
       ]
     },
     {
-      "source": "//js-eu1.hs-analytics.net/analytics/1666638900000/26169725.js",
+      "source": "//js-eu1.hs-analytics.net/analytics/*/*.js",
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "*" },
