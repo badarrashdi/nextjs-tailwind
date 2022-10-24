@@ -1,0 +1,30 @@
+{
+  "name": "react-next-storyblok-boilerplate",
+  "version": "1.0.0",
+  "description": "Next.js Storyblok Boilerplate",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run partytown && next build",
+    "partytown": "partytown copylib public/~partytown",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@builder.io/partytown": "^0.7.1",
+    "@storyblok/react": "^1.0.3",
+    "axios": "^0.27.2",
+    "next": "^12.1.0",
+    "nextjs-cors": "^2.1.1",
+    "particles.js": "^2.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "storyblok-rich-text-react-renderer": "^2.6.1",
+    "tailwind": "^4.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.11",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
+  }
+}
