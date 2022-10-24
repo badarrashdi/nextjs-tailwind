@@ -13,7 +13,7 @@ export default function Home({ story }) {
   return (
     <div className="w-full">
       <Head>
-        <Partytown debug={true} forward={['dataLayer.push']} />
+        <Partytown debug={false} forward={['dataLayer.push']} />
         <title>{story.content.seo.title}</title>
         <meta property="og:site_name" content={story.content.seo.title} />
         <meta property="og:title" content={story.content.seo.title} />
