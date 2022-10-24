@@ -13,7 +13,6 @@ export default function Home({ story }) {
   return (
     <div className="w-full">
       <Head>
-        <Partytown debug={false} />
         <title>{story.content.seo.title}</title>
         <meta property="og:site_name" content={story.content.seo.title} />
         <meta property="og:title" content={story.content.seo.title} />
@@ -32,7 +31,7 @@ export default function Home({ story }) {
       </Head>
 
       <StoryblokComponent blok={story.content} />
-      <script type="text/partytown" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/26169725.js" />
+      <script type="text/partytown" id="hs-script-loader" src="//js-eu1.hs-scripts.com/26169725.js" />
     </div>
   );
 }
