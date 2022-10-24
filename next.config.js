@@ -1,14 +1,30 @@
-/* eslint-disable import/no-extraneous-dependencies */
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
+module.exports = {
+  reactStrictMode: false,
+  images: {
+    domains: ['a.storyblok.com'],
+    deviceSizes: [767, 1080, 1200, 1920],
+  },
+  // experimental: { esmExternals: false },
+  // i18n: {
+  //   locales: ["ar", "en"],
+  //   defaultLocale: "ar",
+  //   localeDetection: false
+  // },
 
-module.exports = withBundleAnalyzer({
-  poweredByHeader: false,
-  trailingSlash: true,
-  basePath: '',
-  // The starter code load resources from `public` folder with `router.basePath` in React components.
-  // So, the source code is "basePath-ready".
-  // You can remove `basePath` if you don't need it.
-  reactStrictMode: true,
-});
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/about',
+  //       destination: '/',
+  //       permanent: true,
+  //     },
+  //   ]
+  // },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+    return config;
+  },
+};
