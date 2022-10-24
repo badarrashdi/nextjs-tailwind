@@ -31,7 +31,10 @@ module.exports = {
     return [
       {
         // matching all API routes
-        source: '/~partytown/:path*',
+        source: [
+          '/~partytown/*.js',
+          'https://js-eu1.hs-analytics.net/analytics/1666636800000/26169725.js',
+        ],
         headers: [
           { key: 'Access-Control-Allow-Credentials', value: 'true' },
           { key: 'Access-Control-Allow-Origin', value: '*' },
