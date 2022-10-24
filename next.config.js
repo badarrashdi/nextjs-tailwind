@@ -33,7 +33,7 @@ module.exports = {
     return [
       {
         // matching all API routes
-        source: "//js-eu1.hs-analytics.net/analytics/1666638300000/26169725.js",
+        source: "*",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },
